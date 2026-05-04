@@ -26,7 +26,6 @@ namespace POO
         }
 
         /*
-        // ===== FORMA CLÁSSICA (COMENTADA) =====
         private string Marca;
 
         public void SetMarca(string marca)
