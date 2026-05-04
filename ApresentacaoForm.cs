@@ -11,7 +11,7 @@ namespace POO
 {
     internal class ApresentacaoForm : Form
     {
-        Label titulo01 = new Label();//apagar?? addrange 
+        Label titulo01 = new Label(); 
         Label titulo02 = new Label();
         Label titulo03 = new Label();
 
@@ -146,7 +146,7 @@ namespace POO
             txtAno.AutoSize = true;
             txtVelocidade.AutoSize = true;
 
-            img.Image = Image.FromFile("C:\\Users\\LabInfo\\Downloads\\POOtudo\\img\\camaro.jpg");//pegar img
+            img.Image = Image.FromFile("C:\\Users\\LabInfo\\Downloads\\POOtudo\\img\\camaro.jpg");//corrigir caminho
             img.SizeMode = PictureBoxSizeMode.StretchImage;
             this.img.Location = new Point(100, 290);
             img.Width = 200;

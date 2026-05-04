@@ -10,7 +10,6 @@ namespace POO
     {
         //visibilidade private, public, protected, internal
 
-        // ===== FORMA MODERNA (PROPRIEDADE) =====
         public string Marca { get; set; }
         public string Modelo { get; set; }
         public string Velocidade { get; set; }
