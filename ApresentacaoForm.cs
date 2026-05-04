@@ -146,7 +146,7 @@ namespace POO
             txtAno.AutoSize = true;
             txtVelocidade.AutoSize = true;
 
-            img.Image = Image.FromFile("C:\\Users\\LabInfo\\Downloads\\POOtudo\\img\\camaro.jpg");//corrigir caminho
+            img.Image = Image.FromFile("C:\\Users\\LabInfo\\Downloads\\POOtudo\\img\\camaro.jpg");//corrigir caminho;
             img.SizeMode = PictureBoxSizeMode.StretchImage;
             this.img.Location = new Point(100, 290);
             img.Width = 200;
