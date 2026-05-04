@@ -25,7 +25,7 @@ namespace POO
             this.Imagem = Imagem;   
         }
 
-        /*
+        /* antiga
         private string Marca;
 
         public void SetMarca(string marca)
