@@ -1,0 +1,115 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Drawing;
+
+namespace POO
+{
+    internal class ApresentacaoForm: Form
+    {
+        //objeto label
+        Label titulo01 = new Label();
+        Label titulo02 = new Label();
+        Automovel obj01 = new Automovel();
+        Button btobj01 = new Button();  
+
+        //CONSTRUTOR (toda classe tem, independente se criar o não)
+        public ApresentacaoForm()
+        {
+            this.Text = "Apresentação";
+            this.Size = new Size(600, 600);
+            titulo01.Text = "Apresentação de elementos em classe!!";
+            titulo01.Font = new Font("Arial", 16);
+            titulo01.AutoSize = true; //ajustar no comprimento do texto
+            titulo01.Location = new Point(100, 100);
+            btobj01.Text = "Clicar";
+            btobj01.Location =  new Point(50, 50);
+            //add MARCA a objeto 
+            obj01.Marca = "Ford";
+            titulo02.Location = new Point(105, 105);
+            titulo02.AutoSize = true;
+            titulo02.Text = obj01.Marca;
+            //fazer o elemento exibir no form
+            //array de controls
+            Control[] elementos = { titulo01, titulo02 };
+            this.Controls.AddRange(elementos);
+            //this.Controls.Add(titulo02);
+            //this.Controls.Add(titulo01);
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // ApresentacaoForm
+            // 
+            this.ClientSize = new System.Drawing.Size(278, 244);
+            this.Name = "ApresentacaoForm";
+            this.Load += new System.EventHandler(this.ApresentacaoForm_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        private void ApresentacaoForm_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace POO
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new ApresentacaoForm());
+        }
+    }
+}
+//objeto = instância;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO
+{
+    internal class Automovel
+    {
+        //visibilidade private, public, protected, internal
+        //public - pode ser acessado por qualquer classe
+        //private - só pode ser acessada pela própria classe
+        //protected - própria classe e derivadas
+        //internal - só pelo mesmo assembly
+
+        //construtor
+        //métodos de acesso
+        /*public void SetMarca(string x) 
+        { 
+            Marca = x;
+        }
+        public string GetMarca() 
+        {  
+            return Marca; 
+        } */
+        public string Marca { get; set; }  //get retorna - set atribui
+        public Automovel() 
+        { 
+            
+        }
+    }
+}
