@@ -152,5 +152,23 @@ namespace POO
             img.Width = 200;
             img.Height = 150;
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // ApresentacaoForm
+            // 
+            this.ClientSize = new System.Drawing.Size(278, 244);
+            this.Name = "ApresentacaoForm";
+            this.Load += new System.EventHandler(this.ApresentacaoForm_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        private void ApresentacaoForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
