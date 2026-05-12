@@ -17,4 +17,3 @@ namespace POO
         }
     }
 }
-//objeto = instância;

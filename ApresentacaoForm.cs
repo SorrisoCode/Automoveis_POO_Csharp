@@ -15,6 +15,7 @@ namespace POO
         Label titulo02 = new Label();
         Label titulo03 = new Label();
         Label titulo04 = new Label();   
+        Label titulo05 = new Label();
 
         Automovel obj01 = new Automovel("Fiat", "Uno", "180km/h", 2020, "img.png");
 
@@ -32,18 +33,23 @@ namespace POO
         Button btobj04 = new Button();  
         Button btHeranca = new Button();
         Button btCorvette = new Button();
+        Button btFusca = new Button();
 
         PictureBox img = new PictureBox();
 
         public ApresentacaoForm()
         {
             this.Text = "Apresentação";
-            this.Size = new Size(700, 700);
-
+            this.Size = new Size(950, 700);
             titulo01.Text = "Botões com descrições dos veículos";
             titulo01.Font = new Font("Arial", 16);
             titulo01.AutoSize = true;
-            titulo01.Location = new Point(100, 20);
+
+            // força o cálculo do tamanho antes de centralizar
+            this.Controls.Add(titulo01);
+
+            titulo01.Left = (this.ClientSize.Width - titulo01.Width) / 2;
+            titulo01.Top = 20;
 
             txtFrear.AutoSize = true;
             txtTipo.AutoSize = true;
@@ -64,8 +70,12 @@ namespace POO
             btCorvette.Location = new Point(350, 80);
             btCorvette.Click += clicar4;
 
+            btFusca.Text = "Fusca";
+            btFusca.Location = new Point(450, 80);
+            btFusca.Click += clicar5;
+
             btHeranca.Text = "Herança";
-            btHeranca.Location = new Point(450, 80);
+            btHeranca.Location = new Point(550, 80);
             btHeranca.Click += clicarHeranca;
 
             titulo02.Location = new Point(105, 105);
@@ -89,10 +99,13 @@ namespace POO
                 btCorvette,
                 btHeranca,
                 txtTipo,
-                txtFrear
+                txtFrear,
+                btFusca
             };
 
             this.Controls.AddRange(elementos);
+            CentralizarBotoes();
+            this.Resize += (s, e) => CentralizarBotoes();
 
             img.Location = new Point(100, 220);
             img.Width = 150;
@@ -100,6 +113,47 @@ namespace POO
             img.SizeMode = PictureBoxSizeMode.StretchImage;
 
             this.Controls.Add(img);
+
+            foreach (Control c in this.Controls)
+            {
+                if (c is Button b)
+                {
+                    b.TabStop = false;
+                    b.FlatStyle = FlatStyle.Flat;
+                    b.FlatAppearance.BorderSize = 1;
+
+                    b.BackColor = Color.LightGray;
+                    b.ForeColor = Color.Black;
+
+                    b.FlatAppearance.MouseOverBackColor = Color.DarkGray;
+                    b.FlatAppearance.MouseDownBackColor = Color.DarkGray;
+                }
+            }
+        }
+
+        private void CentralizarBotoes()
+        {
+            Button[] botoes =
+            {
+                btobj01, btobj02, btobj03,
+                btCorvette, btFusca, btHeranca
+            };
+
+            int larguraBotao = 100;
+            int espacamento = 15;
+
+            int totalLargura = (botoes.Length * larguraBotao) + ((botoes.Length - 1) * espacamento);
+
+            int startX = (this.ClientSize.Width - totalLargura) / 2;
+            int y = 80;
+
+            for (int i = 0; i < botoes.Length; i++)
+            {
+                botoes[i].Location = new Point(
+                    startX + i * (larguraBotao + espacamento),
+                    y
+                );
+            }
         }
 
         private void clicar(object sender, EventArgs e)
@@ -209,6 +263,34 @@ namespace POO
             txtVelocidade.AutoSize = true;
 
             img.Image = Image.FromFile("C:\\Users\\LabInfo\\source\\repos\\Automoveis_POO_Csharp\\img\\corvette.jpg");
+            img.Location = new Point(100, 290);
+            img.Width = 200;
+            img.Height = 150;
+        }
+
+        private void clicar5(object sender, EventArgs e)
+        {
+            obj01.Marca = "Volkswagen";
+            obj01.Modelo = "Beetle";
+            obj01.Ano = 1953;
+            obj01.Velocidade = "100 km/h";
+
+            txtMarca.Text = "Marca: " + obj01.Marca;
+            txtModelo.Text = "Modelo: " + obj01.Modelo;
+            txtAno.Text = "Ano: " + obj01.Ano;
+            txtVelocidade.Text = "Velocidade: " + obj01.Velocidade + "\n" + obj01.Acelerar("100");
+
+            txtMarca.Location = new Point(100, 140);
+            txtModelo.Location = new Point(100, 170);
+            txtAno.Location = new Point(100, 200);
+            txtVelocidade.Location = new Point(100, 230);
+
+            txtMarca.AutoSize = true;
+            txtModelo.AutoSize = true;
+            txtAno.AutoSize = true;
+            txtVelocidade.AutoSize = true;
+
+            img.Image = Image.FromFile("C:\\Users\\LabInfo\\source\\repos\\Automoveis_POO_Csharp\\img\\fusca.jpg");
             img.Location = new Point(100, 290);
             img.Width = 200;
             img.Height = 150;
