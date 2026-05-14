@@ -39,7 +39,7 @@ namespace POO
 
         PictureBox img = new PictureBox();
 
-        // VELOCIDADE ATUAL
+        // velocidade inicial
         int velocidadeAtual = 0;
 
         public ApresentacaoForm()
@@ -153,6 +153,7 @@ namespace POO
             }
         }
 
+        //centraliza
         private void CentralizarBotoes()
         {
             Button[] botoes =
