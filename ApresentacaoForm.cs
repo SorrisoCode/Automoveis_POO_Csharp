@@ -39,13 +39,12 @@ namespace POO
 
         PictureBox img = new PictureBox();
 
-        // velocidade inicial
         int velocidadeAtual = 0;
 
         public ApresentacaoForm()
         {
             this.Text = "Apresentação";
-            this.Size = new Size(950, 700);
+            this.Size = new Size(950, 570);
 
             titulo01.Text = "Botões com descrições dos veículos";
             titulo01.Font = new Font("Arial", 16);
