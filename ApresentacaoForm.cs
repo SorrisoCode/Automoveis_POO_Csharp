@@ -58,6 +58,12 @@ namespace POO
             txtFrear.AutoSize = true;
             txtTipo.AutoSize = true;
 
+            // CORREÇÃO
+            txtMarca.AutoSize = true;
+            txtModelo.AutoSize = true;
+            txtAno.AutoSize = true;
+            txtVelocidade.AutoSize = true;
+
             btobj01.Text = "Uno";
             btobj01.Click += clicar;
 
@@ -221,11 +227,6 @@ namespace POO
             txtAno.Text = "Ano: " + obj01.Ano;
             txtVelocidade.Text = "Velocidade: " + velocidadeAtual + " km/h";
 
-            txtMarca.AutoSize = true;
-            txtModelo.AutoSize = true;
-            txtAno.AutoSize = true;
-            txtVelocidade.AutoSize = true;
-
             img.Image = Image.FromFile("C:\\Users\\LabInfo\\source\\repos\\Automoveis_POO_Csharp\\img\\fiat.jpg");
 
             CentralizarConteudo();
@@ -288,7 +289,10 @@ namespace POO
         private void clicar5(object sender, EventArgs e)
         {
             obj01.Marca = "Volkswagen";
-            obj01.Modelo = "Beetle";
+
+            // CORREÇÃO
+            obj01.Modelo = "Fusca";
+
             obj01.Ano = 1953;
 
             velocidadeAtual = 100;
