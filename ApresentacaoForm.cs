@@ -44,21 +44,22 @@ namespace POO
         public ApresentacaoForm()
         {
             this.Text = "Apresentação";
-            this.Size = new Size(950, 570);
+            this.Size = new Size(950, 700);
+            this.Font = new Font("Arial", 12);
 
-            titulo01.Text = "Botões com descrições dos veículos";
+            titulo01.Text = "Descrição dos veículos";
             titulo01.Font = new Font("Arial", 16);
             titulo01.AutoSize = true;
 
             this.Controls.Add(titulo01);
 
-            titulo01.Left = (this.ClientSize.Width - titulo01.Width) / 2;
+            CentralizarTitulo();
+
             titulo01.Top = 20;
 
             txtFrear.AutoSize = true;
             txtTipo.AutoSize = true;
 
-            // CORREÇÃO
             txtMarca.AutoSize = true;
             txtModelo.AutoSize = true;
             txtAno.AutoSize = true;
@@ -118,13 +119,15 @@ namespace POO
 
             this.Resize += (s, e) =>
             {
+                CentralizarTitulo();
+
                 CentralizarBotoes();
                 CentralizarConteudo();
             };
 
-            img.Width = 200;
-            img.Height = 150;
-            img.SizeMode = PictureBoxSizeMode.StretchImage;
+            img.Width = 320;
+            img.Height = 240;
+            img.SizeMode = PictureBoxSizeMode.Zoom;
 
             this.Controls.Add(img);
 
@@ -136,7 +139,7 @@ namespace POO
                     b.FlatStyle = FlatStyle.Flat;
                     b.FlatAppearance.BorderSize = 1;
 
-                    // BOTÕES ACELERAR E FREAR
+                    // acelerar e frear
                     if (b == btAcelerar || b == btFrear)
                     {
                         b.BackColor = Color.Gray;
@@ -147,7 +150,6 @@ namespace POO
                     }
                     else
                     {
-                        // OUTROS BOTÕES
                         b.BackColor = Color.LightGray;
                         b.ForeColor = Color.Black;
 
@@ -156,6 +158,11 @@ namespace POO
                     }
                 }
             }
+        }
+
+        private void CentralizarTitulo()
+        {
+            titulo01.Left = (this.ClientSize.Width - titulo01.Width) / 2;
         }
 
         //centraliza
@@ -205,13 +212,13 @@ namespace POO
             txtFrear.Left = centro - (txtFrear.Width / 2);
 
             txtMarca.Top = 170;
-            txtModelo.Top = 200;
-            txtAno.Top = 230;
-            txtVelocidade.Top = 260;
-            txtFrear.Top = 300;
+            txtModelo.Top = 205;
+            txtAno.Top = 240;
+            txtVelocidade.Top = 275;
+            txtFrear.Top = 315;
 
             img.Left = centro - (img.Width / 2);
-            img.Top = 330;
+            img.Top = 355;
         }
 
         private void clicar(object sender, EventArgs e)
@@ -290,7 +297,6 @@ namespace POO
         {
             obj01.Marca = "Volkswagen";
 
-            // CORREÇÃO
             obj01.Modelo = "Fusca";
 
             obj01.Ano = 1953;
