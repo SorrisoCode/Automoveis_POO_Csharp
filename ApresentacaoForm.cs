@@ -80,7 +80,7 @@ namespace POO
             btFusca.Text = "Fusca";
             btFusca.Click += clicar5;
 
-            // herança
+            //herança
             btAcelerar.Text = "Acelerar";
             btAcelerar.Click += clicarAcelerar;
 
