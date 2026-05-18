@@ -165,7 +165,7 @@ namespace POO
             titulo01.Left = (this.ClientSize.Width - titulo01.Width) / 2;
         }
 
-        //centraliza
+        //centralizar
         private void CentralizarBotoes()
         {
             Button[] botoes =
