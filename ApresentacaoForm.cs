@@ -139,7 +139,7 @@ namespace POO
                     b.FlatStyle = FlatStyle.Flat;
                     b.FlatAppearance.BorderSize = 1;
 
-                    // acelerar e frear
+                    // botões acelerar e frear
                     if (b == btAcelerar || b == btFrear)
                     {
                         b.BackColor = Color.Gray;
