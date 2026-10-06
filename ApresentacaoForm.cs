@@ -223,125 +223,175 @@ namespace POO
 
         private void clicar(object sender, EventArgs e)
         {
-            obj01.Marca = "Fiat";
-            obj01.Modelo = "Uno";
-            obj01.Ano = 2020;
+            try
+            {
+                obj01.Marca = "Fiat";
+                obj01.Modelo = "Uno";
+                obj01.Ano = 2020;
 
-            velocidadeAtual = 180;
+                velocidadeAtual = 180;
 
-            txtMarca.Text = "Marca: " + obj01.Marca;
-            txtModelo.Text = "Modelo: " + obj01.Modelo;
-            txtAno.Text = "Ano: " + obj01.Ano;
-            txtVelocidade.Text = "Velocidade: " + velocidadeAtual + " km/h";
+                txtMarca.Text = "Marca: " + obj01.Marca;
+                txtModelo.Text = "Modelo: " + obj01.Modelo;
+                txtAno.Text = "Ano: " + obj01.Ano;
+                txtVelocidade.Text = "Velocidade: " + velocidadeAtual + " km/h";
 
-            img.Image = Image.FromFile("C:\\Users\\LabInfo\\source\\repos\\Automoveis_POO_Csharp\\img\\fiat.jpg");
+                img.Image = Image.FromFile(".\\img\\fiat.jpg");
 
-            CentralizarConteudo();
+                CentralizarConteudo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void clicar2(object sender, EventArgs e)
         {
-            obj01.Marca = "Chevrolet";
-            obj01.Modelo = "Opala";
-            obj01.Ano = 1980;
+            try
+            {
+                obj01.Marca = "Chevrolet";
+                obj01.Modelo = "Opala";
+                obj01.Ano = 1980;
 
-            velocidadeAtual = 170;
+                velocidadeAtual = 170;
 
-            txtMarca.Text = "Marca: " + obj01.Marca;
-            txtModelo.Text = "Modelo: " + obj01.Modelo;
-            txtAno.Text = "Ano: " + obj01.Ano;
-            txtVelocidade.Text = "Velocidade: " + velocidadeAtual + " km/h";
+                txtMarca.Text = "Marca: " + obj01.Marca;
+                txtModelo.Text = "Modelo: " + obj01.Modelo;
+                txtAno.Text = "Ano: " + obj01.Ano;
+                txtVelocidade.Text = "Velocidade: " + velocidadeAtual + " km/h";
 
-            img.Image = Image.FromFile("C:\\Users\\LabInfo\\source\\repos\\Automoveis_POO_Csharp\\img\\opala.jpg");
+                img.Image = Image.FromFile(".\\img\\opala.jpg");
 
-            CentralizarConteudo();
+                CentralizarConteudo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void clicar3(object sender, EventArgs e)
         {
-            obj01.Marca = "Chevrolet";
-            obj01.Modelo = "Camaro";
-            obj01.Ano = 2007;
+            try
+            {
+                obj01.Marca = "Chevrolet";
+                obj01.Modelo = "Camaro";
+                obj01.Ano = 2007;
 
-            velocidadeAtual = 250;
+                velocidadeAtual = 250;
 
-            txtMarca.Text = "Marca: " + obj01.Marca;
-            txtModelo.Text = "Modelo: " + obj01.Modelo;
-            txtAno.Text = "Ano: " + obj01.Ano;
-            txtVelocidade.Text = "Velocidade: " + velocidadeAtual + " km/h";
+                txtMarca.Text = "Marca: " + obj01.Marca;
+                txtModelo.Text = "Modelo: " + obj01.Modelo;
+                txtAno.Text = "Ano: " + obj01.Ano;
+                txtVelocidade.Text = "Velocidade: " + velocidadeAtual + " km/h";
 
-            img.Image = Image.FromFile("C:\\Users\\LabInfo\\source\\repos\\Automoveis_POO_Csharp\\img\\camaro.jpg");
+                img.Image = Image.FromFile(".\\img\\camaro.jpg");
 
-            CentralizarConteudo();
+                CentralizarConteudo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void clicar4(object sender, EventArgs e)
         {
-            obj01.Marca = "Chevrolet";
-            obj01.Modelo = "Corvette C6";
-            obj01.Ano = 2008;
+            try
+            {
+                obj01.Marca = "Chevrolet";
+                obj01.Modelo = "Corvette C6";
+                obj01.Ano = 2008;
 
-            velocidadeAtual = 300;
+                velocidadeAtual = 300;
 
-            txtMarca.Text = "Marca: " + obj01.Marca;
-            txtModelo.Text = "Modelo: " + obj01.Modelo;
-            txtAno.Text = "Ano: " + obj01.Ano;
-            txtVelocidade.Text = "Velocidade: " + velocidadeAtual + " km/h";
+                txtMarca.Text = "Marca: " + obj01.Marca;
+                txtModelo.Text = "Modelo: " + obj01.Modelo;
+                txtAno.Text = "Ano: " + obj01.Ano;
+                txtVelocidade.Text = "Velocidade: " + velocidadeAtual + " km/h";
 
-            img.Image = Image.FromFile("C:\\Users\\LabInfo\\source\\repos\\Automoveis_POO_Csharp\\img\\corvette.jpg");
+                img.Image = Image.FromFile(".\\img\\corvette.jpg");
 
-            CentralizarConteudo();
+                CentralizarConteudo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void clicar5(object sender, EventArgs e)
         {
-            obj01.Marca = "Volkswagen";
+            try
+            {
+                obj01.Marca = "Volkswagen";
 
-            obj01.Modelo = "Fusca";
+                obj01.Modelo = "Fusca";
 
-            obj01.Ano = 1953;
+                obj01.Ano = 1953;
 
-            velocidadeAtual = 100;
+                velocidadeAtual = 100;
 
-            txtMarca.Text = "Marca: " + obj01.Marca;
-            txtModelo.Text = "Modelo: " + obj01.Modelo;
-            txtAno.Text = "Ano: " + obj01.Ano;
-            txtVelocidade.Text = "Velocidade: " + velocidadeAtual + " km/h";
+                txtMarca.Text = "Marca: " + obj01.Marca;
+                txtModelo.Text = "Modelo: " + obj01.Modelo;
+                txtAno.Text = "Ano: " + obj01.Ano;
+                txtVelocidade.Text = "Velocidade: " + velocidadeAtual + " km/h";
 
-            img.Image = Image.FromFile("C:\\Users\\LabInfo\\source\\repos\\Automoveis_POO_Csharp\\img\\fusca.jpg");
+                img.Image = Image.FromFile(".\\img\\fusca.jpg");
 
-            CentralizarConteudo();
+                CentralizarConteudo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void clicarAcelerar(object sender, EventArgs e)
         {
-            velocidadeAtual += 10;
+            try
+            {
+                velocidadeAtual += 10;
 
-            txtVelocidade.Text =
-                "Velocidade: " + velocidadeAtual + " km/h";
+                txtVelocidade.Text =
+                    "Velocidade: " + velocidadeAtual + " km/h";
 
-            txtFrear.Text =
-                "Acelerando o carro...";
+                txtFrear.Text =
+                    "Acelerando o carro...";
 
-            CentralizarConteudo();
+                CentralizarConteudo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void clicarFrear(object sender, EventArgs e)
         {
-            velocidadeAtual -= 10;
-
-            if (velocidadeAtual < 0)
+            try
             {
-                velocidadeAtual = 0;
+                velocidadeAtual -= 10;
+
+                if (velocidadeAtual < 0)
+                {
+                    velocidadeAtual = 0;
+                }
+
+                txtVelocidade.Text =
+                    "Velocidade: " + velocidadeAtual + " km/h";
+
+                txtFrear.Text =
+                    "Freando o carro...";
+
+                CentralizarConteudo();
             }
-
-            txtVelocidade.Text =
-                "Velocidade: " + velocidadeAtual + " km/h";
-
-            txtFrear.Text =
-                "Freando o carro...";
-
-            CentralizarConteudo();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void InitializeComponent()
